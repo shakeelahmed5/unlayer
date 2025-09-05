@@ -1,0 +1,116 @@
+{
+  "counters": {
+    "u_column": 1,
+    "u_row": 1,
+    "u_content_text": 1
+  },
+  "body": {
+    "id": "body",
+    "rows": [
+      {
+        "id": "row-1",
+        "cells": [1],
+        "columns": [
+          {
+            "id": "column-1",
+            "contents": [
+              {
+                "id": "text-1",
+                "type": "text",
+                "values": {
+                  "containerPadding": "20px",
+                  "anchor": "",
+                  "fontSize": "14px",
+                  "textAlign": "left",
+                  "lineHeight": "140%",
+                  "linkStyle": {
+                    "inherit": true,
+                    "linkColor": "#0000ee",
+                    "linkHoverColor": "#0000ee",
+                    "linkUnderline": true,
+                    "linkHoverUnderline": true
+                  },
+                  "hideDesktop": false,
+                  "_meta": {
+                    "htmlID": "u_content_text_1",
+                    "htmlClassNames": "u_content_text"
+                  },
+                  "selectable": true,
+                  "draggable": true,
+                  "duplicatable": true,
+                  "deletable": true,
+                  "hideable": true,
+                  "text": "<h1 style=\"font-size: 28px; line-height: 140%; text-align: center;\"><span style=\"color: #333333;\">Welcome to Unlayer Svelte SDK!</span></h1>\n<p style=\"font-size: 16px; line-height: 140%; text-align: center;\"><span style=\"color: #666666;\">This is a sample email design loaded into the Unlayer editor. You can edit this content, add new elements, and export the final design as HTML.</span></p>\n<p style=\"font-size: 14px; line-height: 140%; text-align: center;\"><span style=\"color: #999999;\">Try the buttons above to load this design, export HTML, or reset the editor.</span></p>"
+                }
+              }
+            ],
+            "values": {
+              "backgroundColor": "",
+              "padding": "0px",
+              "border": {},
+              "_meta": {
+                "htmlID": "u_column_1",
+                "htmlClassNames": "u_column"
+              }
+            }
+          }
+        ],
+        "values": {
+          "displayCondition": null,
+          "columns": false,
+          "backgroundColor": "#ffffff",
+          "columnsBackgroundColor": "#ffffff",
+          "backgroundImage": {
+            "url": "",
+            "fullWidth": true,
+            "repeat": "no-repeat",
+            "size": "custom",
+            "position": "center"
+          },
+          "padding": "0px",
+          "anchor": "",
+          "hideDesktop": false,
+          "_meta": {
+            "htmlID": "u_row_1",
+            "htmlClassNames": "u_row"
+          }
+        }
+      }
+    ],
+    "values": {
+      "popupPosition": "center",
+      "popupWidth": "600px",
+      "popupHeight": "auto",
+      "borderRadius": "3px",
+      "contentWidth": "600px",
+      "contentHeight": "auto",
+      "contentAlign": "center",
+      "fontFamily": {
+        "label": "Arial",
+        "value": "arial,helvetica,sans-serif"
+      },
+      "textColor": "#000000",
+      "backgroundColor": "#ffffff",
+      "backgroundImage": {
+        "url": "",
+        "fullWidth": true,
+        "repeat": "no-repeat",
+        "size": "custom",
+        "position": "center"
+      },
+      "preheaderText": "",
+      "linkStyle": {
+        "body": true,
+        "linkColor": "#0000ee",
+        "linkHoverColor": "#0000ee",
+        "linkUnderline": true,
+        "linkHoverUnderline": true
+      },
+      "_meta": {
+        "htmlID": "u_body",
+        "htmlClassNames": "u_body"
+      }
+    }
+  },
+  "schemaVersion": 16
+}
