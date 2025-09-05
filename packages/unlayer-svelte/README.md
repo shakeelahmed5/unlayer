@@ -15,7 +15,7 @@ A Svelte wrapper for the Unlayer Email Editor, providing a clean and type-safe i
 ## Installation
 
 ```bash
-npm install @svelte-email-editor/unlayer-svelte
+npm install svelte-unlayer-editor
 ```
 
 **Note:** The Unlayer script is loaded dynamically from CDN, so no additional dependencies are required.
@@ -24,7 +24,7 @@ npm install @svelte-email-editor/unlayer-svelte
 
 ```svelte
 <script lang="ts">
-  import UnlayerEditor from '@svelte-email-editor/unlayer-svelte';
+  import UnlayerEditor from 'svelte-unlayer-editor';
   import initialDesign from './welcome.json';
   
   function handleExport(event) {
@@ -43,7 +43,7 @@ npm install @svelte-email-editor/unlayer-svelte
 
 ```svelte
 <script lang="ts">
-  import UnlayerEditor from '@svelte-email-editor/unlayer-svelte';
+  import UnlayerEditor from 'svelte-unlayer-editor';
   import type { UnlayerEditorMethods } from '@svelte-email-editor/unlayer-svelte';
   
   let editorRef: UnlayerEditorMethods;

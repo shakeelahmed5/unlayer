@@ -1,5 +1,5 @@
 {
-  "name": "@svelte-email-editor/unlayer-svelte",
+  "name": "svelte-unlayer-editor",
   "version": "1.0.0",
   "description": "A Svelte wrapper for the Unlayer Email Editor, providing a clean and type-safe interface for building email editors in Svelte applications",
   "type": "module",
