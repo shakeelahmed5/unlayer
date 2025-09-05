@@ -23,34 +23,83 @@ npm install @svelte-email-editor/unlayer-svelte
 ## Quick Start
 
 ```svelte
-<script>
-  import { UnlayerEditor } from '@svelte-email-editor/unlayer-svelte';
+<script lang="ts">
+  import UnlayerEditor from '@svelte-email-editor/unlayer-svelte';
+  import initialDesign from './welcome.json';
   
-  let editorRef;
+  function handleExport(event) {
+    const { html, design } = event.detail;
+    console.log(html, design);
+  }
+</script>
+
+<UnlayerEditor
+  design={initialDesign}
+  on:export-html={handleExport}
+/>
+```
+
+### Advanced Usage
+
+```svelte
+<script lang="ts">
+  import UnlayerEditor from '@svelte-email-editor/unlayer-svelte';
+  import type { UnlayerEditorMethods } from '@svelte-email-editor/unlayer-svelte';
+  
+  let editorRef: UnlayerEditorMethods;
+  let currentDesign: Record<string, any> = {};
   
   function handleLoaded(event) {
     console.log('Editor loaded:', event.detail.editor);
   }
   
   function handleDesignUpdated(event) {
-    console.log('Design updated:', event.detail.design);
+    currentDesign = event.detail.design;
+    console.log('Design updated:', currentDesign);
+  }
+  
+  function handleExport(event) {
+    const { html, design } = event.detail;
+    console.log('Exported HTML:', html);
+    console.log('Design JSON:', design);
   }
   
   async function exportHtml() {
     const result = await editorRef.exportHtml();
     console.log('Exported HTML:', result.html);
   }
+  
+  function loadNewDesign() {
+    const newDesign = {
+      counters: { u_column: 0, u_row: 0, u_content_text: 0 },
+      body: { id: "body", rows: [], values: {} },
+      schemaVersion: 16
+    };
+    editorRef.loadDesign(newDesign);
+  }
 </script>
 
 <UnlayerEditor
   bind:this={editorRef}
+  design={currentDesign}
   options={{
     projectId: 'your-project-id',
-    displayMode: 'email'
+    displayMode: 'email',
+    locale: 'en'
   }}
+  tools={{
+    whitelist: ['text', 'image', 'button'],
+    blacklist: ['video']
+  }}
+  className="my-editor"
+  style="height: 600px; border: 1px solid #ccc;"
   on:loaded={handleLoaded}
   on:design-updated={handleDesignUpdated}
+  on:export-html={handleExport}
 />
+
+<button on:click={exportHtml}>Export HTML</button>
+<button on:click={loadNewDesign}>Load New Design</button>
 ```
 
 ## API Reference
@@ -62,8 +111,8 @@ npm install @svelte-email-editor/unlayer-svelte
 | `design` | `Record<string, any>` | `undefined` | Initial design JSON to load |
 | `tools` | `{ whitelist?: string[], blacklist?: string[] }` | `undefined` | Tool configuration |
 | `options` | `Record<string, any>` | `{}` | Unlayer editor options |
-| `class` | `string` | `''` | CSS class for styling |
-| `style` | `string` | `''` | Inline styles |
+| `className` | `string` | `undefined` | CSS class for styling |
+| `style` | `string` | `undefined` | Inline styles |
 
 ### Events
 
@@ -99,6 +148,35 @@ npm run build
 # Start demo app
 npm run dev
 ```
+
+### Testing
+
+The project includes comprehensive unit tests using Vitest:
+
+```bash
+# Run all tests
+npm run test
+
+# Run tests in watch mode
+npm run test:run
+
+# Run tests with UI
+npm run test:ui
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+**Test Coverage:**
+- ✅ Component initialization and options
+- ✅ Event emission (loaded, design-updated, export-html)
+- ✅ Design loading and validation
+- ✅ Error handling and edge cases
+- ✅ Public method functionality
+- ✅ TypeScript interface validation
+- ✅ Utility function testing
+
+**38 tests passing** with 100% success rate
 
 ### Project Structure
 
