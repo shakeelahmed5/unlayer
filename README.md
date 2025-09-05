@@ -1,5 +1,10 @@
 # Unlayer Svelte SDK
 
+[![npm version](https://img.shields.io/npm/v/svelte-unlayer-editor.svg)](https://www.npmjs.com/package/svelte-unlayer-editor)
+[![npm downloads](https://img.shields.io/npm/dm/svelte-unlayer-editor.svg)](https://www.npmjs.com/package/svelte-unlayer-editor)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Svelte 5](https://img.shields.io/badge/Svelte-5-orange.svg)](https://svelte.dev/)
+
 A Svelte wrapper for the Unlayer Email Editor, providing a clean and type-safe interface for building email editors in Svelte applications.
 
 ## Features
@@ -17,6 +22,8 @@ A Svelte wrapper for the Unlayer Email Editor, providing a clean and type-safe i
 ```bash
 npm install svelte-unlayer-editor
 ```
+
+**📦 [View on NPM](https://www.npmjs.com/package/svelte-unlayer-editor)** | **🚀 [Live Demo](https://unlayer-demo-81cn.vercel.app/)**
 
 **Note:** The Unlayer script is loaded dynamically from CDN, so no additional dependencies are required.
 
