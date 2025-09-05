@@ -1,7 +1,7 @@
 # Unlayer Svelte SDK
 
-[![npm version](https://img.shields.io/npm/v/svelte-unlayer-editor.svg)](https://www.npmjs.com/package/svelte-unlayer-editor)
-[![npm downloads](https://img.shields.io/npm/dm/svelte-unlayer-editor.svg)](https://www.npmjs.com/package/svelte-unlayer-editor)
+[![npm version](https://img.shields.io/npm/v/svelte-unlayer-editor?style=flat-square)](https://www.npmjs.com/package/svelte-unlayer-editor)
+[![npm downloads](https://img.shields.io/npm/dt/svelte-unlayer-editor?style=flat-square)](https://www.npmjs.com/package/svelte-unlayer-editor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Svelte 5](https://img.shields.io/badge/Svelte-5-orange.svg)](https://svelte.dev/)
 
