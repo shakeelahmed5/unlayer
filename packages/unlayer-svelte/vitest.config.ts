@@ -14,4 +14,7 @@ export default defineConfig({
       $lib: '/src',
     },
   },
+  esbuild: {
+    target: 'node14'
+  }
 });

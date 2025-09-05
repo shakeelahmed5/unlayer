@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["vitest/globals", "jsdom"],
+    "noEmit": true
+  },
+  "include": ["src/**/*", "src/test/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
