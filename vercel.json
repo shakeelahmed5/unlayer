@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd apps/demo && npm run build",
+  "outputDirectory": "apps/demo/build",
+  "installCommand": "npm install",
+  "framework": "sveltekit",
+  "rootDirectory": "apps/demo"
+}
