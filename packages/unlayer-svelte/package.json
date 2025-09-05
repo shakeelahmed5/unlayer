@@ -1,14 +1,15 @@
 {
   "name": "@svelte-email-editor/unlayer-svelte",
   "version": "1.0.0",
-  "description": "Svelte wrapper for Unlayer Email Editor",
+  "description": "A Svelte wrapper for the Unlayer Email Editor, providing a clean and type-safe interface for building email editors in Svelte applications",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "exports": {
     ".": {
@@ -17,6 +18,16 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shakeelahmed5/unlayer.git"
+  },
+  "homepage": "https://github.com/shakeelahmed5/unlayer#readme",
+  "bugs": {
+    "url": "https://github.com/shakeelahmed5/unlayer/issues"
+  },
+  "author": "Svelte Email Editor Team",
+  "license": "MIT",
   "peerDependencies": {
     "svelte": "^5.0.0 || ^4.0.0"
   },
@@ -36,10 +47,21 @@
   },
   "keywords": [
     "svelte",
+    "svelte-email-editor",
     "unlayer",
     "email-editor",
+    "email-builder",
     "wysiwyg",
-    "builder"
+    "builder",
+    "drag-and-drop",
+    "email-template",
+    "newsletter",
+    "marketing",
+    "typescript",
+    "svelte5",
+    "svelte-kit",
+    "component",
+    "wrapper"
   ],
   "scripts": {
     "build": "vite build",
@@ -47,6 +69,13 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
